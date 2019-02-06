@@ -34,8 +34,8 @@ include_once("includes/right-cart.php");
     <div class="single_product_thumb clearfix">
         <div class="product_thumbnail_slides owl-carousel">
             <?php
-                while($result=mysqli_fetch_array($res)) {
-                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_image'] ).'"/>';
+                while($resul=mysqli_fetch_assoc($res)) {
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $resul['product_image'] ).'" class="img-responsive img-fluid" style="max-width: 1000px;height:auto";max-height:980px;git />';
                 }
             ?>
         </div>
@@ -55,7 +55,7 @@ include_once("includes/right-cart.php");
             <!-- Select Box -->
             <p><?php echo $row['product_size'];?></p>
             <p><?php echo $row['product_color'];?></p>
-            <p>Rating :- <?php echo $row['rating'];?></p>
+            <p>Rating :- <?php echo round($row['rating'],1);?></p>
             <!-- Cart & Favourite Box -->
             <div class="cart-fav-box d-flex align-items-center">
                 <!-- Cart -->

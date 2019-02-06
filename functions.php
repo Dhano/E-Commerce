@@ -17,7 +17,7 @@ function getProduct($product_id){
 
 function getProductImg($product_id){
     global  $connection;
-    $query = "SELECT product_image FROM product_images JOIN product where product_image.product_id = product.product_id and product.product_id = $product_id";
+    $query = "SELECT product_image FROM product_images JOIN product where product_images.product_id = product.product_id and product.product_id =$product_id";
     $get_query = mysqli_query($connection, $query);
     return $get_query;
 }
