@@ -1,0 +1,36 @@
+active promotion
+SELECT * from promotions where deleted != 1
+
+Product images
+SELECT * from product_images where product_id = <product_id>
+
+Transaction
+SELECT * from wallet_transaction where user_id = <user_id>;
+
+Dislay USer type
+SELECT * FROM users where user_type_id = <type_id>;
+
+All address
+SELECT * from user_addresses where user_id = <user_id>;
+
+Product by seller
+SELECT * from product where seller_id = <seller>;
+
+Products in cart
+SELECT * from cart_products where cart_id = <cart>;
+
+Delivery boy fulfilled order
+SELECT * from orders where delivery_boy_id = <user_id> and status = 3;
+
+amt of wallet
+SELECT amout from wallet where user_id = <user_id>;
+
+transcation of wallet
+SELECT * from wallet_transaction where user_id = <user_id>;
+
+card details
+Select * from cards where user_id = <user_id>;
+
+
+
+

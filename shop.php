@@ -191,9 +191,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-1.jpg" alt="">
+                                        <img src="assets/img/product-img/product-1.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-2.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-2.jpg" alt="">
 
                                         <!-- Product Badge -->
                                         <div class="product-badge offer-badge">
@@ -229,9 +229,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-2.jpg" alt="">
+                                        <img src="assets/img/product-img/product-2.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-3.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-3.jpg" alt="">
 
                                         <!-- Favourite -->
                                         <div class="product-favourite">
@@ -263,9 +263,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-3.jpg" alt="">
+                                        <img src="assets/img/product-img/product-3.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-4.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-4.jpg" alt="">
 
                                         <!-- Product Badge -->
                                         <div class="product-badge new-badge">
@@ -302,9 +302,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-4.jpg" alt="">
+                                        <img src="assets/img/product-img/product-4.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-5.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-5.jpg" alt="">
 
                                         <!-- Favourite -->
                                         <div class="product-favourite">
@@ -336,9 +336,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-5.jpg" alt="">
+                                        <img src="assets/img/product-img/product-5.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-6.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-6.jpg" alt="">
 
                                         <!-- Product Badge -->
                                         <div class="product-badge offer-badge">
@@ -375,9 +375,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-6.jpg" alt="">
+                                        <img src="assets/img/product-img/product-6.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-7.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-7.jpg" alt="">
 
                                         <!-- Favourite -->
                                         <div class="product-favourite">
@@ -409,9 +409,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-7.jpg" alt="">
+                                        <img src="assets/img/product-img/product-7.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-8.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-8.jpg" alt="">
 
                                         <!-- Product Badge -->
                                         <div class="product-badge new-badge">
@@ -448,9 +448,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-8.jpg" alt="">
+                                        <img src="assets/img/product-img/product-8.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-9.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-9.jpg" alt="">
                                         
                                         <!-- Favourite -->
                                         <div class="product-favourite">
@@ -482,9 +482,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-9.jpg" alt="">
+                                        <img src="assets/img/product-img/product-9.jpg" alt="">
                                         <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product-1.jpg" alt="">
+                                        <img class="hover-img" src="assets/img/product-img/product-1.jpg" alt="">
 
                                         <!-- Favourite -->
                                         <div class="product-favourite">
