@@ -1,8 +1,8 @@
 <?php 
     define("SERVER", 'localhost');
-    define("USER", 'root');
-    define("PASSWORD", '');
-    define("DB", 'ecom');
+    define("USER", 'Nikhil');
+    define("PASSWORD", 'n20081998');
+    define("DB", 'ecommerce');
 
     $connection = mysqli_connect(SERVER, USER, PASSWORD, DB);
     /*if($connection){
