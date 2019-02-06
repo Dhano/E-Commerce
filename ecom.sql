@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2019 at 11:28 AM
+-- Generation Time: Feb 06, 2019 at 02:28 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -46,6 +46,7 @@ CREATE TABLE `card` (
 CREATE TABLE `cart` (
   `cart_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `active` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
   `updated_at` datetime NOT NULL,
@@ -62,6 +63,7 @@ CREATE TABLE `cart` (
 --
 
 CREATE TABLE `cart_products` (
+  `cart_product_id` int(11) NOT NULL,
   `cart_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `cart_products_quantity` int(11) NOT NULL,
@@ -226,18 +228,6 @@ CREATE TABLE `promotions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `return_product`
---
-
-CREATE TABLE `return_product` (
-  `return_product_id` int(11) NOT NULL,
-  `original_cart_product_id` int(11) NOT NULL,
-  `replaced_cart_product_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `seller`
 --
 
@@ -358,7 +348,7 @@ ALTER TABLE `cart`
 -- Indexes for table `cart_products`
 --
 ALTER TABLE `cart_products`
-  ADD PRIMARY KEY (`cart_id`);
+  ADD PRIMARY KEY (`cart_product_id`);
 
 --
 -- Indexes for table `notification`
@@ -401,12 +391,6 @@ ALTER TABLE `product_type`
 --
 ALTER TABLE `promotions`
   ADD PRIMARY KEY (`promotion_id`);
-
---
--- Indexes for table `return_product`
---
-ALTER TABLE `return_product`
-  ADD PRIMARY KEY (`return_product_id`);
 
 --
 -- Indexes for table `seller`
@@ -464,7 +448,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `cart_products`
 --
 ALTER TABLE `cart_products`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_product_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `notification`
@@ -507,12 +491,6 @@ ALTER TABLE `product_type`
 --
 ALTER TABLE `promotions`
   MODIFY `promotion_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `return_product`
---
-ALTER TABLE `return_product`
-  MODIFY `return_product_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seller`
