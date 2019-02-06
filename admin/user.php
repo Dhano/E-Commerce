@@ -2,7 +2,10 @@
 <html lang="en">
 
 <?php
+$page = "user";
 include_once ('includes/header.php');
+include_once ('includes/db.php');
+include_once ('functions.php');
 ?>
 
 <body class="dark-edition">
@@ -21,8 +24,7 @@ include_once ('includes/header.php');
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header card-header-primary">
-                                <h4 class="card-title ">Simple Table</h4>
-                                <p class="card-category"> Here is a subtitle for this table</p>
+                                <h4 class="card-title ">User List</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -35,118 +37,36 @@ include_once ('includes/header.php');
                                             Name
                                         </th>
                                         <th>
-                                            Country
+                                            Phone No
                                         </th>
                                         <th>
-                                            City
-                                        </th>
-                                        <th>
-                                            Salary
+                                            Eamil
                                         </th>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Oud-Turnhout
-                                            </td>
-                                            <td class="text-primary">
-                                                $36,738
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>
-                                                Minerva Hooper
-                                            </td>
-                                            <td>
-                                                Curaçao
-                                            </td>
-                                            <td>
-                                                Sinaai-Waas
-                                            </td>
-                                            <td class="text-primary">
-                                                $23,789
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                3
-                                            </td>
-                                            <td>
-                                                Sage Rodriguez
-                                            </td>
-                                            <td>
-                                                Netherlands
-                                            </td>
-                                            <td>
-                                                Baileux
-                                            </td>
-                                            <td class="text-primary">
-                                                $56,142
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                4
-                                            </td>
-                                            <td>
-                                                Philip Chaney
-                                            </td>
-                                            <td>
-                                                Korea, South
-                                            </td>
-                                            <td>
-                                                Overland Park
-                                            </td>
-                                            <td class="text-primary">
-                                                $38,735
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                5
-                                            </td>
-                                            <td>
-                                                Doris Greene
-                                            </td>
-                                            <td>
-                                                Malawi
-                                            </td>
-                                            <td>
-                                                Feldkirchen in Kärnten
-                                            </td>
-                                            <td class="text-primary">
-                                                $63,542
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                6
-                                            </td>
-                                            <td>
-                                                Mason Porter
-                                            </td>
-                                            <td>
-                                                Chile
-                                            </td>
-                                            <td>
-                                                Gloucester
-                                            </td>
-                                            <td class="text-primary">
-                                                $78,615
-                                            </td>
-                                        </tr>
+                                        <?php
+                                            $result = getResultWithUser(0);
+                                            $row;
+                                            $i = 1;
+                                            while($row = mysqli_fetch_assoc($result)) {
+                                                ?>
+                                                <tr>
+                                                    <td>
+                                                        <?php echo $i++;?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['user_first_name'] . " " . $row['user_last_name'];?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['user_phone'];?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['user_email'];?>
+                                                    </td>
+                                                </tr>
+                                                <?php
+                                            }
+                                        ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -156,13 +76,12 @@ include_once ('includes/header.php');
                     <div class="col-md-12">
                         <div class="card card-plain">
                             <div class="card-header card-header-primary">
-                                <h4 class="card-title mt-0"> Table on Plain Background</h4>
-                                <p class="card-category"> Here is a subtitle for this table</p>
+                                <h4 class="card-title mt-0"> Supplier</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="">
+                                    <table class="table">
+                                        <thead class=" text-primary">
                                         <th>
                                             ID
                                         </th>
@@ -170,118 +89,88 @@ include_once ('includes/header.php');
                                             Name
                                         </th>
                                         <th>
-                                            Country
+                                            Phone No
                                         </th>
                                         <th>
-                                            City
-                                        </th>
-                                        <th>
-                                            Salary
+                                            Eamil
                                         </th>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Oud-Turnhout
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>
-                                                Minerva Hooper
-                                            </td>
-                                            <td>
-                                                Curaçao
-                                            </td>
-                                            <td>
-                                                Sinaai-Waas
-                                            </td>
-                                            <td>
-                                                $23,789
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                3
-                                            </td>
-                                            <td>
-                                                Sage Rodriguez
-                                            </td>
-                                            <td>
-                                                Netherlands
-                                            </td>
-                                            <td>
-                                                Baileux
-                                            </td>
-                                            <td>
-                                                $56,142
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                4
-                                            </td>
-                                            <td>
-                                                Philip Chaney
-                                            </td>
-                                            <td>
-                                                Korea, South
-                                            </td>
-                                            <td>
-                                                Overland Park
-                                            </td>
-                                            <td>
-                                                $38,735
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                5
-                                            </td>
-                                            <td>
-                                                Doris Greene
-                                            </td>
-                                            <td>
-                                                Malawi
-                                            </td>
-                                            <td>
-                                                Feldkirchen in Kärnten
-                                            </td>
-                                            <td>
-                                                $63,542
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                6
-                                            </td>
-                                            <td>
-                                                Mason Porter
-                                            </td>
-                                            <td>
-                                                Chile
-                                            </td>
-                                            <td>
-                                                Gloucester
-                                            </td>
-                                            <td>
-                                                $78,615
-                                            </td>
-                                        </tr>
+                                        <?php
+                                        $result = getResultWithUser(2);
+                                        $row;
+                                        $i = 1;
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                            ?>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $i++;?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['user_first_name'] . " " . $row['user_last_name'];?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['user_phone'];?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['user_email'];?>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-primary">
+                                <h4 class="card-title ">Delivery Boy</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Phone No
+                                        </th>
+                                        <th>
+                                            Eamil
+                                        </th>
+                                        </thead>
+                                        <tbody>
+                                        <?php
+                                        $result = getResultWithUser(3);
+                                        $row;
+                                        $i = 1;
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                            ?>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $i++;?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['user_first_name'] . " " . $row['user_last_name'];?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['user_phone'];?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['user_email'];?>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
                                         </tbody>
                                     </table>
                                 </div>
