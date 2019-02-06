@@ -1,4 +1,12 @@
 <?php
+    ob_start();
+
+    if(isset($_COOKIE['e_commerce'])){
+        header("Location: admin/index.php");
+    } else{
+?>
+
+<?php
     include_once ("login_includes/header.php");
 ?>
 
@@ -27,7 +35,7 @@
 
     <div class="login-box" hidden>
 
-        <form class="login-form" action="">
+        <form class="login-form" id="login_form" action="login_includes/login.php" method="post" name="login_form">
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
             <div class="form-group">
                 <label class="control-label">USERNAME</label>
@@ -49,7 +57,7 @@
             </div>
             <div class="form-group btn-container" id="sign_in_btn">
 <!--                <input type="submit" name="login" value="SIGN IN" class="btn btn-primary btn-block" >-->
-                <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
+                <button class="btn btn-primary btn-block" type="submit" name="sign_in"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
             </div>
 
             <div class="form-group">
@@ -59,7 +67,7 @@
         </form>
 
 
-        <form class="forget-form" action="register/forgot">
+        <form class="forget-form" action="" method="post">
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Forgot Password ?</h3>
             <div class="form-group">
                 <label class="control-label">EMAIL</label>
@@ -82,3 +90,5 @@
 
 </body>
 </html>
+<?php }
+        ?>
