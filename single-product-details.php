@@ -35,7 +35,7 @@ include_once("includes/right-cart.php");
         <div class="product_thumbnail_slides owl-carousel">
             <?php
                 while($resul=mysqli_fetch_assoc($res)) {
-                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $resul['product_image'] ).'" class="img-responsive img-fluid" style="max-width: 1000px;height:auto";max-height:980px;git />';
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $resul['product_image'] ).'" class="img-responsive img-fluid" style="max-width: 1000px;height:auto;max-height:980px;" />';
                 }
             ?>
         </div>

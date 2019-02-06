@@ -8,9 +8,9 @@
 ?>
 <?php
     define("HOST", "localhost");
-    define("USERNAME", "root");
-    define("PASSWORD", "");
-    define("DB", "ecom");
+    define("USERNAME", "Nikhil");
+    define("PASSWORD", "n20081998");
+    define("DB", "ecommerce");
 
     $connection = mysqli_connect(HOST, USERNAME, PASSWORD, DB);
 

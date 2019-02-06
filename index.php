@@ -26,7 +26,7 @@
                     <div class="hero-content">
                         <h6>T-Shirts</h6>
                         <h2>New Collection</h2>
-                        <a href="#" class="btn essence-btn">view collection</a>
+                        <a href="shop.php" class="btn essence-btn">view collection</a>
                     </div>
                 </div>
             </div>
