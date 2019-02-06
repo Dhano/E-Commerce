@@ -176,33 +176,52 @@ md = {
 
   initDashboardPageCharts: function() {
 
-    if ($('#dailySalesChart').length != 0 || $('#completedTasksChart').length != 0 || $('#websiteViewsChart').length != 0) {
+    if ($('#dailySalesChart').length != 0) {
       /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
-      dataDailySalesChart = {
-        labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-        series: [
-          [12, 17, 7, 17, 23, 18, 38]
-        ]
-      };
+      var d = new Date();
+      var date = d.getDate();
+      var res;
+        $.ajax({
+            type: "POST",
+            url: "functions.php?getProductOfLastWeek=true",
+            processData: false,
+            contentType: false
+        }).done(function(response){
+          res = JSON.parse(response);
+          console.log(res[4]);
+            dataDailySalesChart = {
+                labels: [d.getDate(), d.getDate(d.setDate(d.getDate() - 1)), d.getDate(d.setDate(d.getDate() - 1)), d.getDate(d.setDate(d.getDate() - 1)), d.getDate(d.setDate(d.getDate() - 1)), d.getDate(d.setDate(d.getDate() - 1)), d.getDate(d.setDate(d.getDate() - 1))],
+                series: [
+                    [res[0],res[1],res[2],res[3],res[4],res[5],res[6]]
+                ]
 
-      optionsDailySalesChart = {
-        lineSmooth: Chartist.Interpolation.cardinal({
-          tension: 0
-        }),
-        low: 0,
-        high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-        chartPadding: {
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0
-        },
-      }
+            };
 
-      var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
+            optionsDailySalesChart = {
+                lineSmooth: Chartist.Interpolation.cardinal({
+                    tension: 0
+                }),
+                low: 0,
+                high:4 , // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+                chartPadding: {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0
+                },
+            }
 
-      md.startAnimationForLineChart(dailySalesChart);
+            var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
+
+            md.startAnimationForLineChart(dailySalesChart);
+
+        }).fail(function(response){
+            alert(response + " bye");
+        })
+
+
+
 
 
       /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
