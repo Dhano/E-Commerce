@@ -97,7 +97,7 @@
                                         <!-- Product Description -->
                                         <div class="product-description">
                                             <span><?php echo $product_description; ?></span>
-                                            <a href="single-product-details.php">
+                                            <a href="single-product-details.php?product_id=<?php echo $product_id; ?>">
                                                 <h6><?php echo $product_name; ?></h6>
                                             </a>
                                             <p class="product-price"><span class="old-price"> Rs. <?php echo ($product_price + $product_price * 0.1); ?></span> Rs. <?php echo $product_price; ?></p>
