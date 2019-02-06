@@ -1,2 +1,2 @@
 # E-Commerce
-Tsec Hackathon 6/2/2019
+Tsec Hackathon 6/2/2019git remote add origin <url>
