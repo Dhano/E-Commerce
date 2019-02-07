@@ -59,7 +59,7 @@ include_once("includes/right-cart.php");
             <!-- Cart & Favourite Box -->
             <div class="cart-fav-box d-flex align-items-center">
                 <!-- Cart -->
-                <button type="submit" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
+                <a type="button" name="addtocart" href="includes/add_to_cart.php?product_id=<?php echo $row['product_id']; ?>&url=../single-product-details.php?product_id=<?php echo $row['product_id']; ?>" class="btn essence-btn">Add to cart</a>
                 <!-- Favourite -->
                 <div class="product-favourite ml-4">
                     <a href="#" class="favme fa fa-heart"></a>

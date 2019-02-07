@@ -52,7 +52,7 @@ include_once ("../includes/db.php");
                     $path = "/";
                     setcookie($cookie_name, $cookie_content, $cookie_time, $path);
                 }
-                header("Location: ../admin/");
+                header("Location: ../index.php");
             } else {
                 header("Location: ../login_page.php?wrong_pass=true");
             }

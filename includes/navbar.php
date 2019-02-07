@@ -6,6 +6,14 @@
  * Time: 1:29 PM
  */
 ?>
+<?php
+session_start();
+include_once ("includes/db.php");
+$user_id = $_SESSION['user_id'];
+$query = "SELECT * FROM cart, cart_products WHERE cart.cart_id = cart_products.cart_id AND cart.user_id = $user_id AND cart.active = 1";
+$get_cart_items = mysqli_query($connection, $query);
+$num_cart_items = mysqli_num_rows($get_cart_items);
+?>
 <header class="header_area">
     <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
         <!-- Classy Menu -->
@@ -80,9 +88,9 @@
         <div class="header-meta d-flex clearfix justify-content-end">
             <!-- Search Area -->
             <div class="search-area">
-                <form action="#" method="post">
+                <form action="includes/search.php" method="post" name="search_form">
                     <input type="search" name="search" id="headerSearch" placeholder="Type for search">
-                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button type="submit" name="search_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
             <!-- Favourite Area -->
@@ -95,7 +103,7 @@
             </div>
             <!-- Cart Area -->
             <div class="cart-area">
-                <a href="#" id="essenceCartBtn"><img src="assets/img/core-img/bag.svg" alt=""> <span>3</span></a>
+                <a href="#" id="essenceCartBtn"><img src="assets/img/core-img/bag.svg" alt=""> <span><?php echo $num_cart_items; ?></span></a>
             </div>
         </div>
 

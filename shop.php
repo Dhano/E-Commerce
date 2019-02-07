@@ -121,7 +121,7 @@
                                             <div class="hover-content">
                                                 <!-- Add to Cart -->
                                                 <div class="add-to-cart-btn">
-                                                    <a href="#" class="btn essence-btn">Add to Cart</a>
+                                                    <a href="includes/add_to_cart.php?product_id=<?php echo $product_id; ?>&url=../shop.php" class="btn essence-btn">Add to Cart</a>
                                                 </div>
                                             </div>
                                         </div>

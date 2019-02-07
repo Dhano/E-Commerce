@@ -19,3 +19,5 @@
 <script src="assets/js/classy-nav.min.js"></script>
 <!-- Active js -->
 <script src="assets/js/active.js"></script>
+
+<script src="assets/js/scripts.js"></script>
